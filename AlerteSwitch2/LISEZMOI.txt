@@ -1,0 +1,20 @@
+ALERTE STOCK SWITCH 2 - serveur Linux (Ubuntu 22.04, Python 3)
+==============================================================
+
+Verifie les pages de produits.txt toutes les ~60 secondes et envoie une notification ntfy
+("Switch 2 dispo !") des que l'une passe en stock, ou qu'editioncollector.fr annonce un reassort.
+
+COPIER SUR LE SERVEUR (depuis le PC, PowerShell)
+  scp -r "C:\Users\jerom\AlerteSwitch2\linux" jerome@srvlab1:~/AlerteSwitch2
+
+TESTER
+  cd ~/AlerteSwitch2
+  python3 alerte_switch2.py --test-alerte
+  python3 alerte_switch2.py --une-fois
+
+LANCER (dans byobu ou tmux)
+  cd ~/AlerteSwitch2
+  python3 alerte_switch2.py
+
+Options : --intervalle 90 (secondes entre deux tours), --ntfy AUTRE (autre canal, '' = aucun)
+Pages surveillees : produits.txt ("Nom | adresse"), modifiable sans relancer.

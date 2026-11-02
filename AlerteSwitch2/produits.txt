@@ -1,0 +1,31 @@
+# Pages a surveiller : une ligne par produit, au format   Nom | URL
+# Les lignes qui commencent par # sont ignorees.
+# Pour ajouter un magasin : ouvre la fiche produit dans ton navigateur, copie l'adresse et colle-la ici.
+
+# --- Version batterie amovible / remplacable (EAN 0045496337568) ---
+Leclerc (amovible)    | https://www.e.leclerc/fp/console-nintendo-switch-2-edition-40e-anniversaire-de-the-legend-of-zelda-ce-produit-contient-une-batterie-remplacable-par-l-utilisateur-nintendo-0045496337568
+# Joybuy (amovible)   | A COMPLETER
+
+# --- Version batterie collee (EAN 0045496337292) ---
+Leclerc               | https://www.e.leclerc/fp/console-nintendo-switch-2-edition-40e-anniversaire-de-the-legend-of-zelda-nintendo-switch-2-0045496337292
+# Cultura et Fnac retires : ils bloquent le programme (utiliser leur bouton "M'alerter" a la place)
+# Cultura             | https://www.cultura.com/p-console-nintendo-switch-2-edition-limitee-the-legend-of-zelda-ocarina-of-time-13424072.html
+# Fnac                | https://www.fnac.com/Console-Nintendo-Switch-2-Edition-Limitee-40eme-anniversaire-The-Legend-of-Zelda/a21424371/w-4
+Auchan                | https://www.auchan.fr/nintendo-console-de-jeu-nintendo-switch-2-edition-zelda/pr-C1893413
+Amazon                | https://www.amazon.fr/dp/B0F2TN43GH
+# Micromania retire : bloque le programme (anti-robot Incapsula)
+# Micromania          | https://www.micromania.fr/p/console-nintendo-switch-2-edition-limitee-40eme-anniversaire-the-legend-of-zelda-164787.html
+
+# --- Site de suivi : alerte a chaque nouvelle "MISE A JOUR" publiee sur la page ---
+EditionCollector      | https://editioncollector.fr/collectors/console-nintendo-switch-2-the-legend-of-zelda-edition-limitee-40e-anniversaire
+
+# --- Amazon etrangers (meme compte Amazon pour .fr/.de/.it/.com.be) ---
+Amazon Allemagne      | https://www.amazon.de/dp/B0F2TN43GH
+Amazon Italie         | https://www.amazon.it/dp/B0F2TN43GH
+Amazon Belgique       | https://www.amazon.com.be/dp/B0F2TN43GH
+# Amazon UK : modele UK (prise anglaise), frais de douane, et pour l'instant pas livre en France
+Amazon UK             | https://www.amazon.co.uk/dp/B0F2TP12QL
+
+# Cdiscount           | A COMPLETER
+# Carrefour           | A COMPLETER
+# Joybuy              | A COMPLETER
