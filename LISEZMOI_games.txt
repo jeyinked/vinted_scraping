@@ -1,0 +1,39 @@
+ALERTE VINTED - VERSION SERVEUR LINUX (Ubuntu 22.04)
+====================================================
+
+Toutes les ~20 secondes, le script lit les annonces de jeux Switch les plus recentes sur Vinted
+(une seule requete pour tous les jeux), les trie avec recherches.txt, et envoie une notification
+sur ton telephone (appli ntfy, canal switch2-zelda-1jw6pdst) des qu'une annonce correspond.
+Il n'a besoin que de Python 3, deja installe sur Ubuntu 22.04.
+
+Fichiers :
+  alerte_vinted.py    le programme
+  recherches.txt      tes jeux, prix max et filtres (modifiable sans relancer)
+  alerte.log          journal, cree par le programme
+  vus.json            annonces deja vues, cree par le programme
+
+1) COPIER SUR LE SERVEUR (depuis le PC, PowerShell)
+     scp -r "C:\Users\jerom\AlerteVinted\linux" jerome@srvlab1:~/AlerteVinted
+
+2) TESTER (sur le serveur)
+     cd ~/AlerteVinted
+     python3 alerte_vinted.py --test-alerte     # le telephone doit recevoir "Vinted : nouvelle annonce"
+     python3 alerte_vinted.py --une-fois        # un passage, sans rester lance
+
+3) LANCER (dans byobu, puis F6 pour te detacher)
+     cd ~/AlerteVinted
+     python3 alerte_vinted.py
+
+Options :
+  --intervalle 30          secondes entre deux verifications (defaut 20)
+  --accepter-sans-boite    accepte aussi les jeux vendus sans boite (cartouche seule)
+  --plateforme ''          toutes les consoles au lieu de la Switch seule
+  --ntfy ''                ne pas envoyer au telephone
+
+A SAVOIR
+- Au premier lancement, il examine les annonces deja en ligne et previent pour celles qui
+  correspondent ; ensuite, seulement pour les nouvelles.
+- Si Vinted bloque ("BLOQUE par Vinted"), il fait une pause de 5 min puis ralentit tout seul.
+  Un serveur en datacenter peut etre bloque plus vite qu'une connexion de particulier.
+- Pour ajouter ou modifier un jeu : edite recherches.txt (nano recherches.txt), pas besoin de relancer.
+- N'oublie pas d'arreter la version Windows si elle tourne encore, sinon tu recevras chaque alerte en double.
